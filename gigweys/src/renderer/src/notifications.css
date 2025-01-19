@@ -1,0 +1,122 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Changed to pure black */
+}
+
+.main-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000; /* Changed to pure black */
+  overflow: hidden;
+}
+
+.animated-background {
+  display: none; /* Removed background animations */
+}
+
+.grid-overlay {
+  display: none; /* Removed grid overlay */
+}
+
+.glow-circles {
+  display: none; /* Removed glow circles */
+}
+
+.circle {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: floatAround 15s infinite;
+}
+
+.circle-1 {
+  width: 600px;
+  height: 600px;
+  background: #2a3c9d;
+  top: -10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 500px;
+  height: 500px;
+  background: #462a9d;
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -3s;
+}
+
+.circle-3 {
+  width: 400px;
+  height: 400px;
+  background: #2a9d98;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -6s;
+}
+
+.circle-4 {
+  width: 300px;
+  height: 300px;
+  background: #2a619d;
+  bottom: 10%;
+  left: 20%;
+  animation-delay: -9s;
+}
+
+.circle-5 {
+  width: 350px;
+  height: 350px;
+  background: #2a9d63;
+  top: 10%;
+  right: 20%;
+  animation-delay: -12s;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification-content {
+  background: rgba(20, 20, 40, 0.9); /* Kept dark background for notifications */
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes gridFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+@keyframes floatAround {
+  0% { transform: translate(0, 0); }
+  33% { transform: translate(50px, -50px); }
+  66% { transform: translate(-50px, 50px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
