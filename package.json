@@ -1,0 +1,7 @@
+{
+  "name": "your-app",
+  "version": "1.0.0",
+  "scripts": {
+    "postpackage": "copy /path/to/ffmpeg.dll /path/to/output/directory"
+  }
+}
